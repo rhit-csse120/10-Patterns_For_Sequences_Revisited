@@ -1160,7 +1160,7 @@ def make_concatenation(strings):
     What comes in: A sequence of strings.
     What goes out: Returns the "concatenation" of all the strings,
       that is, returns a single string that is all of the strings
-      "stiched together".  See examples.
+      "stitched together".  See examples.
     Side effects: None.
     Examples:
       -- make_concatenation(["Give",
@@ -1180,7 +1180,7 @@ def make_concatenation(strings):
     # -------------------------------------------------------------------------
     # TODO: 10. Implement and test this function.
     #     The testing code is already written for you (above).
-    #   HINT: The   +    operator concatenates ("stiches together")
+    #   HINT: The   +    operator concatenates ("stitches together")
     #   any two strings.
     # -------------------------------------------------------------------------
 
