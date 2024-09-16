@@ -12,10 +12,18 @@ plus practice at:
   -- BUILDING a LIST via a loop
   -- BUILDING a STRING via a loop
 
-Authors: David Mutchler, Vibha Alangar, Dave Fisher, Matt Boutell, Mark Hays,
-         Mohammed Noureddine, Sana Ebrahimi, Sriram Mohan, their colleagues and
+Authors: David Mutchler, Rachel Krohn, Dave Fisher, Shawn Bohner, Sriram Mohan,
+         Amanda Stouder, Vibha Alangar, Mark Hays, Dave Henthorn, Matt Boutell,
+         Scott McClellan, Yiji Zhang, Mohammed Noureddine, Steve Chenoweth,
+         Claude Anderson, Michael Wollowski, Chandan Rupakheti,
+         Derek Whitley, Curt Clifton, Valerie Galluzzi, their colleagues and
          PUT_YOUR_NAME_HERE.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+
+"""
+Academic Integrity: I got help on this module from:
+         PUT_HERE_THE_NAMES_OF_PEOPLE_WHO_HELPED_YOU_ON_THIS_MODULE_(IF_ANY).
+"""  # TODO: If you got help from anyone on this module, list their names here.
 
 import testing_helper
 import time
@@ -24,7 +32,7 @@ import math
 
 
 def main():
-    """ Calls the   TEST   functions in this module. """
+    """Calls the   TEST   functions in this module."""
 
     # -------------------------------------------------------------------------
     # STUDENTS: Do the work in this module as follows.
@@ -55,108 +63,96 @@ def main():
 
 
 def run_test_sum_at_even():
-    """ Tests the    sum_at_even    function. """
+    """Tests the    sum_at_even    function."""
     print()
-    print('--------------------------------------------------')
-    print('Testing the   sum_at_even  function:')
-    print('--------------------------------------------------')
+    print("--------------------------------------------------")
+    print("Testing the   sum_at_even  function:")
+    print("--------------------------------------------------")
 
-    format_string = '    sum_at_even( {} )'
+    format_string = "    sum_at_even( {} )"
     test_results = [0, 0]  # Number of tests passed, failed.
 
     # Test 1:
     expected = 161
     sequence = (12, 33, 18, 9, 13, 3, 99, 20, 19, 20)
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = sum_at_even(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 2:
     expected = 29
     sequence = (3, 12, 10, 8, 8, 9, 8, 11)
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = sum_at_even(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 3:
     expected = -9999999999
     sequence = (-9999999999, 8888888888)
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = sum_at_even(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 4:
     expected = 8888888888
     sequence = (8888888888, -9999999999)
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = sum_at_even(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 5:
     expected = -176
     sequence = (-77, 20000, -33, 40000, -55, 60000, -11)
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = sum_at_even(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 6:
     expected = 0
     sequence = ()
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = sum_at_even(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 7:
     expected = 0
     sequence = []
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = sum_at_even(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 8:
     expected = 8
     sequence = [8]
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = sum_at_even(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 9:
     expected = -77
     sequence = (-77, 8)
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = sum_at_even(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 10:
     expected = 0
     sequence = (-77, 8, 77)
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = sum_at_even(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 11:
     expected = 1
     sequence = (-77, 8, 78)
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = sum_at_even(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 12:
     expected = 1
     sequence = (-77, 8, 78, 100)
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = sum_at_even(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -186,84 +182,75 @@ def sum_at_even(sequence):
 
 
 def run_test_smallest_index_where_zero():
-    """ Tests the    smallest_index_where_zero    function. """
+    """Tests the    smallest_index_where_zero    function."""
     print()
-    print('--------------------------------------------------')
-    print('Testing the   smallest_index_where_zero  function:')
-    print('--------------------------------------------------')
+    print("--------------------------------------------------")
+    print("Testing the   smallest_index_where_zero  function:")
+    print("--------------------------------------------------")
 
-    format_string = '    smallest_index_where_zero( {} )'
+    format_string = "    smallest_index_where_zero( {} )"
     test_results = [0, 0]  # Number of tests passed, failed.
 
     # Test 1:
     expected = 1
     sequence = (9, 0, 8, 0, 0, 4, 4, 0)
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = smallest_index_where_zero(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 2:
     expected = 4
     sequence = (9, 9, 9, 9, 0, 9, 9, 9)
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = smallest_index_where_zero(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 3:
     expected = -1
     sequence = (4, 5, 4, 5, 4, 5, 4)
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = smallest_index_where_zero(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 4:
     expected = 0
     sequence = [0, 0, 0]
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = smallest_index_where_zero(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 5:
     expected = 0
     sequence = [0, 0]
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = smallest_index_where_zero(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 6:
     expected = 0
     sequence = [0, 77]
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = smallest_index_where_zero(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 7:
     expected = 1
     sequence = [-40, 0]
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = smallest_index_where_zero(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 8:
     expected = -1
     sequence = [-40, 67]
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = smallest_index_where_zero(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 9:
     expected = 1
     sequence = (1, 0, 2, 0, 0, 0, 0, 6, 9, 0, 0, 12)
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = smallest_index_where_zero(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -305,7 +292,7 @@ def smallest_index_where_zero(sequence):
 
 
 def run_test_multiply_x_coordinates():
-    """ Tests the    multiply_x_coordinates    function. """
+    """Tests the    multiply_x_coordinates    function."""
     print()
     print("--------------------------------------------------")
     print("Testing the   multiply_x_coordinates  function:")
@@ -316,52 +303,53 @@ def run_test_multiply_x_coordinates():
 
     # Test 1:
     expected = 5 * 2 * 7 * 10 * 2  # which is 1400
-    circles = (rg.Circle(rg.Point(5, 10), 20),
-               rg.Circle(rg.Point(2, 20), 20),
-               rg.Circle(rg.Point(7, 30), 10),
-               rg.Circle(rg.Point(10, 40), 20),
-               rg.Circle(rg.Point(2, 50), 10))
-    print_expected_result_of_test([circles], expected, test_results,
-                                  format_string)
+    circles = (
+        rg.Circle(rg.Point(5, 10), 20),
+        rg.Circle(rg.Point(2, 20), 20),
+        rg.Circle(rg.Point(7, 30), 10),
+        rg.Circle(rg.Point(10, 40), 20),
+        rg.Circle(rg.Point(2, 50), 10),
+    )
+    print_expected_result_of_test([circles], expected, test_results, format_string)
     actual = multiply_x_coordinates(circles)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 2:
     expected = 58
     circles = (rg.Circle(rg.Point(58, 10), 20),)
-    print_expected_result_of_test([circles], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([circles], expected, test_results, format_string)
     actual = multiply_x_coordinates(circles)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 3:
     expected = 84 * 28 * 10005  # which is 23531760
-    circles = (rg.Circle(rg.Point(84, 100), 200),
-               rg.Circle(rg.Point(28, 200), 200),
-               rg.Circle(rg.Point(10005, 300), 100))
-    print_expected_result_of_test([circles], expected, test_results,
-                                  format_string)
+    circles = (
+        rg.Circle(rg.Point(84, 100), 200),
+        rg.Circle(rg.Point(28, 200), 200),
+        rg.Circle(rg.Point(10005, 300), 100),
+    )
+    print_expected_result_of_test([circles], expected, test_results, format_string)
     actual = multiply_x_coordinates(circles)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 4:
     expected = 1
     circles = ()
-    print_expected_result_of_test([circles], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([circles], expected, test_results, format_string)
     actual = multiply_x_coordinates(circles)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 5:
     expected = 5 * 0 * 7 * 10 * 2  # which is 0
-    circles = (rg.Circle(rg.Point(5, 10), 20),
-               rg.Circle(rg.Point(0, 20), 20),
-               rg.Circle(rg.Point(7, 30), 10),
-               rg.Circle(rg.Point(10, 40), 20),
-               rg.Circle(rg.Point(2, 50), 10))
+    circles = (
+        rg.Circle(rg.Point(5, 10), 20),
+        rg.Circle(rg.Point(0, 20), 20),
+        rg.Circle(rg.Point(7, 30), 10),
+        rg.Circle(rg.Point(10, 40), 20),
+        rg.Circle(rg.Point(2, 50), 10),
+    )
 
-    print_expected_result_of_test([circles], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([circles], expected, test_results, format_string)
     actual = multiply_x_coordinates(circles)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -370,8 +358,7 @@ def run_test_multiply_x_coordinates():
     for k in range(1, 101):
         circles = circles + (rg.Circle(rg.Point(k, k + 20), 5 * k),)
     expected = math.factorial(100)
-    print_expected_result_of_test([circles], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([circles], expected, test_results, format_string)
     actual = multiply_x_coordinates(circles)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -405,7 +392,7 @@ def multiply_x_coordinates(circles):
 
 
 def run_test_count_same():
-    """ Tests the   count_same   function. """
+    """Tests the   count_same   function."""
     print()
     print("--------------------------------------------------")
     print("Testing the   count_same   function:")
@@ -418,8 +405,9 @@ def run_test_count_same():
     expected = 3
     sequence1 = (11, 33, 83, 18, 30, 55)
     sequence2 = (99, 33, 83, 19, 30, 44)
-    print_expected_result_of_test([sequence1, sequence2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence1, sequence2], expected, test_results, format_string
+    )
     actual = count_same(sequence1, sequence2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -427,8 +415,9 @@ def run_test_count_same():
     expected = 8
     sequence1 = "how are you today?"
     sequence2 = "HOW? r ex u tiday?"
-    print_expected_result_of_test([sequence1, sequence2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence1, sequence2], expected, test_results, format_string
+    )
     actual = count_same(sequence1, sequence2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -436,8 +425,9 @@ def run_test_count_same():
     expected = 1
     sequence1 = [1, 44, 55]
     sequence2 = [0, 44, 77]
-    print_expected_result_of_test([sequence1, sequence2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence1, sequence2], expected, test_results, format_string
+    )
     actual = count_same(sequence1, sequence2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -445,8 +435,9 @@ def run_test_count_same():
     expected = 2
     sequence1 = (1, 44, 55, 88, 44, 88)
     sequence2 = (1, 55, 44, 55, 88, 88)
-    print_expected_result_of_test([sequence1, sequence2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence1, sequence2], expected, test_results, format_string
+    )
     actual = count_same(sequence1, sequence2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -454,8 +445,9 @@ def run_test_count_same():
     expected = 0
     sequence1 = [1, 44, 55, 88, 44]
     sequence2 = [0, 43, 77, 8, 4]
-    print_expected_result_of_test([sequence1, sequence2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence1, sequence2], expected, test_results, format_string
+    )
     actual = count_same(sequence1, sequence2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -463,8 +455,9 @@ def run_test_count_same():
     expected = 0
     sequence1 = []
     sequence2 = []
-    print_expected_result_of_test([sequence1, sequence2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence1, sequence2], expected, test_results, format_string
+    )
     actual = count_same(sequence1, sequence2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -472,8 +465,9 @@ def run_test_count_same():
     expected = 2
     sequence1 = "ok"
     sequence2 = "ok"
-    print_expected_result_of_test([sequence1, sequence2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence1, sequence2], expected, test_results, format_string
+    )
     actual = count_same(sequence1, sequence2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -481,8 +475,9 @@ def run_test_count_same():
     expected = 1
     sequence1 = "ox"
     sequence2 = "ok"
-    print_expected_result_of_test([sequence1, sequence2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence1, sequence2], expected, test_results, format_string
+    )
     actual = count_same(sequence1, sequence2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -490,8 +485,9 @@ def run_test_count_same():
     expected = 1
     sequence1 = "ok"
     sequence2 = "xk"
-    print_expected_result_of_test([sequence1, sequence2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence1, sequence2], expected, test_results, format_string
+    )
     actual = count_same(sequence1, sequence2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -499,8 +495,9 @@ def run_test_count_same():
     expected = 1
     sequence1 = "o"
     sequence2 = "o"
-    print_expected_result_of_test([sequence1, sequence2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence1, sequence2], expected, test_results, format_string
+    )
     actual = count_same(sequence1, sequence2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -508,8 +505,9 @@ def run_test_count_same():
     expected = 0
     sequence1 = "y"
     sequence2 = "n"
-    print_expected_result_of_test([sequence1, sequence2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence1, sequence2], expected, test_results, format_string
+    )
     actual = count_same(sequence1, sequence2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -517,8 +515,9 @@ def run_test_count_same():
     expected = 20
     sequence1 = "12345678901234567890"
     sequence2 = "12345678901234567890"
-    print_expected_result_of_test([sequence1, sequence2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence1, sequence2], expected, test_results, format_string
+    )
     actual = count_same(sequence1, sequence2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -526,8 +525,9 @@ def run_test_count_same():
     expected = 19
     sequence1 = "12345678901234567890"
     sequence2 = "1234567890123456789z"
-    print_expected_result_of_test([sequence1, sequence2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence1, sequence2], expected, test_results, format_string
+    )
     actual = count_same(sequence1, sequence2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -535,8 +535,9 @@ def run_test_count_same():
     expected = 18
     sequence1 = "12345678901234567890"
     sequence2 = "z234567890123456789z"
-    print_expected_result_of_test([sequence1, sequence2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence1, sequence2], expected, test_results, format_string
+    )
     actual = count_same(sequence1, sequence2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -544,8 +545,9 @@ def run_test_count_same():
     expected = 0
     sequence1 = "12345678901234567890"
     sequence2 = "23456789012345678901"
-    print_expected_result_of_test([sequence1, sequence2], expected,
-                                  test_results, format_string)
+    print_expected_result_of_test(
+        [sequence1, sequence2], expected, test_results, format_string
+    )
     actual = count_same(sequence1, sequence2)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -588,7 +590,7 @@ def count_same(sequence1, sequence2):
 
 
 def run_test_has_stutters():
-    """ Tests the   has_stutters   function. """
+    """Tests the   has_stutters   function."""
     print()
     print("--------------------------------------------------")
     print("Testing the   has_stutters   function:")
@@ -600,120 +602,105 @@ def run_test_has_stutters():
     # Test 1:
     expected = True
     sequence = "xhhbrrs"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = has_stutters(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 2:
     expected = True
     sequence = "xxxx"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = has_stutters(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 3:
     expected = False
     sequence = "xaxaxa"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = has_stutters(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 4:
     expected = True
     sequence = "xxx yyy xxxx"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = has_stutters(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 5:
     expected = True
     sequence = "xxx xxx xxxx"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = has_stutters(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 6:
     expected = True
     sequence = "xxxyyyxxxx"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = has_stutters(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 7:
     expected = False
     sequence = ""
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = has_stutters(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 8:
     expected = False
     sequence = "x x x x x x x x x x x x"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = has_stutters(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 9:
     expected = True
     sequence = "x x x x x x x x x x x xx"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = has_stutters(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 10:
     expected = True
     sequence = "xx x x x x x x x x x x x"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = has_stutters(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 11:
     expected = True
     sequence = "x x x xx x x x x x x x x"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = has_stutters(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 12:
     expected = False
     sequence = "ababcabcdabcde"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = has_stutters(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 13:
     expected = False
     sequence = "a"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = has_stutters(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 14:
     expected = False
     sequence = "ba"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = has_stutters(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 15:
     expected = False
     sequence = "bab"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = has_stutters(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -745,7 +732,7 @@ def has_stutters(s):
 
 
 def run_test_shortest_string():
-    """ Tests the   shortest_string   function. """
+    """Tests the   shortest_string   function."""
     print()
     print("--------------------------------------------------")
     print("Testing the   shortest_string   function:")
@@ -756,92 +743,78 @@ def run_test_shortest_string():
 
     # Test 1:
     expected = "a"
-    sequence = ("all", "we", "are", "saying",
-                "is", "give", "peace", "a", "chance")
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    sequence = ("all", "we", "are", "saying", "is", "give", "peace", "a", "chance")
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = shortest_string(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 2:
     expected = "we"
-    sequence = ("all", "we", "are", "saying",
-                "is", "give", "peace", "a chance")
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    sequence = ("all", "we", "are", "saying", "is", "give", "peace", "a chance")
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = shortest_string(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 3:
     expected = "is"
-    sequence = ("all we", "are saying",
-                "is", "give", "peace", "a chance")
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    sequence = ("all we", "are saying", "is", "give", "peace", "a chance")
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = shortest_string(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 4:
     expected = "all we are saying is give peace a chance"
     sequence = ("all we are saying is give peace a chance",)
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = shortest_string(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 5:
     expected = "a"
     sequence = ("a", "c", "b")
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = shortest_string(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 6:
     expected = "c"
     sequence = ("ab", "c", "b")
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = shortest_string(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 7:
     expected = "b"
     sequence = ("ab", "cd", "b")
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = shortest_string(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 8:
     expected = "a"
     sequence = ("a", "c", "b")
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = shortest_string(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 9:
     expected = ""
     sequence = ("a", "b", "")
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = shortest_string(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 10:
     expected = "bb"
     sequence = ("00000", "aaa", "bb", "cccccc", "dddd", "eee")
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = shortest_string(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 11:
     expected = "11"
     sequence = ("00000", "aaa", "11", "cccccc", "dddd", "eee", "bb")
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = shortest_string(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -881,7 +854,7 @@ def shortest_string(strings):
 
 
 def run_test_is_palindrome():
-    """ Tests the   is_palindrome   function. """
+    """Tests the   is_palindrome   function."""
     print()
     print("--------------------------------------------------")
     print("Testing the   is_palindrome   function:")
@@ -893,96 +866,84 @@ def run_test_is_palindrome():
     # Test 1:
     expected = True
     sequence = "abba"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = is_palindrome(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 2:
     expected = False
     sequence = "abbz"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = is_palindrome(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 3:
     expected = True
     sequence = "abcdexxedcba"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = is_palindrome(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 4:
     expected = False
     sequence = "abcdexyedcba"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = is_palindrome(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 5:
     expected = True
     sequence = "bob"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = is_palindrome(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 6:
     expected = True
     sequence = "obbo"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = is_palindrome(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 7:
     expected = True
     sequence = "obbo"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = is_palindrome(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 8:
     expected = False
     sequence = "nope"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = is_palindrome(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 9:
     expected = False
     sequence = "almosttxomla"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = is_palindrome(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 10:
     expected = False
     sequence = "abcxa"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = is_palindrome(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 11:
     expected = False
     sequence = "abccxa"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = is_palindrome(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 12:
     expected = False
     sequence = "aaaabcccccxaaaa"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = is_palindrome(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -992,8 +953,7 @@ def run_test_is_palindrome():
     # It IS a palindrome (ignoring spaces and punctuation).
     expected = True
     sequence = "murderforajarofredrum"
-    print_expected_result_of_test([sequence], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([sequence], expected, test_results, format_string)
     actual = is_palindrome(sequence)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -1042,7 +1002,7 @@ def is_palindrome(s):
 
 
 def run_test_make_even_numbers():
-    """ Tests the   make_even_numbers   function. """
+    """Tests the   make_even_numbers   function."""
     print()
     print("--------------------------------------------------")
     print("Testing the   make_even_numbers   function:")
@@ -1100,7 +1060,7 @@ def make_even_numbers(n):
 
 
 def run_test_make_concatenation():
-    """ Tests the   make_concatenation   function. """
+    """Tests the   make_concatenation   function."""
     print()
     print("--------------------------------------------------")
     print("Testing the   make_concatenation   function:")
@@ -1112,24 +1072,21 @@ def run_test_make_concatenation():
     # Test 1:
     expected = "GivePeaceAChance"
     strings = ["Give", "Peace", "A", "Chance"]
-    print_expected_result_of_test([strings], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([strings], expected, test_results, format_string)
     actual = make_concatenation(strings)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 2:
     expected = "HelloGoodbyeHere andThere"
     strings = ["Hello", "Goodbye", "Here and", "There"]
-    print_expected_result_of_test([strings], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([strings], expected, test_results, format_string)
     actual = make_concatenation(strings)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 3:
     expected = "I love that hat."
     strings = ["I ", "love ", "that hat."]
-    print_expected_result_of_test([strings], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([strings], expected, test_results, format_string)
     actual = make_concatenation(strings)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -1138,16 +1095,14 @@ def run_test_make_concatenation():
     # Test 4:
     expected = ""
     strings = []
-    print_expected_result_of_test([strings], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([strings], expected, test_results, format_string)
     actual = make_concatenation(strings)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 5:
     expected = ""
     strings = ["", "", ""]
-    print_expected_result_of_test([strings], expected, test_results,
-                                  format_string)
+    print_expected_result_of_test([strings], expected, test_results, format_string)
     actual = make_concatenation(strings)
     print_actual_result_of_test(expected, actual, test_results)
 
@@ -1190,17 +1145,19 @@ def make_concatenation(strings):
 # Do NOT change it.  You do NOT have to do anything with it.
 ###############################################################################
 
-def print_expected_result_of_test(arguments, expected,
-                                  test_results, format_string, suffix=""):
-    testing_helper.print_expected_result_of_test(arguments, expected,
-                                                 test_results, format_string,
-                                                 suffix)
+
+def print_expected_result_of_test(
+    arguments, expected, test_results, format_string, suffix=""
+):
+    testing_helper.print_expected_result_of_test(
+        arguments, expected, test_results, format_string, suffix
+    )
 
 
-def print_actual_result_of_test(expected, actual, test_results,
-                                precision=None):
-    testing_helper.print_actual_result_of_test(expected, actual,
-                                               test_results, precision)
+def print_actual_result_of_test(expected, actual, test_results, precision=None):
+    testing_helper.print_actual_result_of_test(
+        expected, actual, test_results, precision
+    )
 
 
 def print_summary_of_test_results(test_results):
