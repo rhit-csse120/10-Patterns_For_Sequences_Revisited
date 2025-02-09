@@ -54,7 +54,7 @@ def main():
     # run_test_sum_at_even()
     # run_test_smallest_index_where_zero()
     # run_test_multiply_x_coordinates()
-    # run_test_count_same()
+    run_test_count_same()
     # run_test_has_stutters()
     # run_test_shortest_string()
     # run_test_is_palindrome()
@@ -398,7 +398,7 @@ def run_test_count_same():
     print("Testing the   count_same   function:")
     print("--------------------------------------------------")
 
-    format_string = "    count_same ( {} )"
+    format_string = "    count_same ( {},\n                 {} )"
     test_results = [0, 0]  # Number of tests passed, failed.
 
     # Test 1:
